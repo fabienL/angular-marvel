@@ -5,8 +5,11 @@ angular.module('marvel.directives')
 	return {
       restrict: 'E',
       scope: {creators: '=info'},
-      templateUrl: 'partials/creators.html',
+      templateUrl: 'partials/creators.html',      
       link : function(scope,element, attrs){
+
+
+      	
      
       }    
     };
