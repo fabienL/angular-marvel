@@ -2,7 +2,10 @@
 WELCOME
 </h1>
 <section>
-	<div ng-repeat='character in characters' class="col-sm-6">			
+   <div class="list-group">
+     
+  </div>
+	<div ng-repeat='character in characters | orderBy : name' class="col-sm-6">			
 		<div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">{{character.name}} - {{character.modified | date:'dd/MM/yyyy'}}</h3>
