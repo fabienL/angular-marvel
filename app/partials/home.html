@@ -1,0 +1,24 @@
+<h1>
+WELCOME
+</h1>
+<section>
+	<div ng-repeat='character in characters' class="col-sm-6">			
+		<div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{character.name}}</h3>
+            </div>
+            <div class="panel-body">
+            	<div class="col-sm-6">
+            		 <img src="{{character.thumbnail.path+'.'+character.thumbnail.extension}}" width="150" alt="">
+            		
+            	</div>
+            	<div class="col-sm-6">
+             		
+            		{{character.description}}	
+            	</div>
+             
+            </div>
+          </div>
+          
+	</div>
+</section>
