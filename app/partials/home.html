@@ -5,7 +5,7 @@ WELCOME
 	<div ng-repeat='character in characters' class="col-sm-6">			
 		<div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">{{character.name}}</h3>
+              <h3 class="panel-title">{{character.name}} - {{character.modified | date:'dd/MM/yyyy'}}</h3>
             </div>
             <div class="panel-body">
             	<div class="col-sm-6">
