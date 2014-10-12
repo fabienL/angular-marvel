@@ -1,5 +1,5 @@
 'use strict';
-var marvelApp = angular.module('marvelApp', [ "ngResource",  "ngRoute", "comics.module"]);
+var marvelApp = angular.module('marvelApp', [ "ngResource",  "ngRoute", "comics.module", 'marvel.filter']);
 
 marvelApp.config(function($routeProvider) {
 	$routeProvider
@@ -22,5 +22,6 @@ marvelApp.config(function($routeProvider) {
 
 marvelApp.constant('marvelAPI', {
 	key : 'df2ce25431b02bf5b0c4e54952e91c71',
-	pathUrl : 'http://gateway.marvel.com:80/v1/public/'
+	pathUrl : 'http://gateway.marvel.com:80/v1/public/',
+	noimgUrl : 'image_not_available'
 });

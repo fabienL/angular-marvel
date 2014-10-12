@@ -1,7 +1,7 @@
 <h1>
 WELCOME
 </h1>
-<section>
+<!--section>
    <div class="list-group">
      
   </div>
@@ -15,9 +15,14 @@ WELCOME
             		 <img src="{{character.thumbnail.path+'.'+character.thumbnail.extension}}" width="150" alt="">            		
             	</div>
             	<div class="col-sm-6">             		
-            		{{character.description}}	
+            	
             	</div>             
             </div>
           </div>          
 	</div>
-</section>
+</section-->
+
+<div ng-repeat='character in characters  | orderBy : "name"' class="col-sm-6">     
+<h3 class="panel-title">{{character.name}}</h3>
+  <picture pathimg="character.thumbnail.path" extensionimg="character.thumbnail.extension" width="350" alt="character.name"></picture>
+</div>

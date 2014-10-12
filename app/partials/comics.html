@@ -1,20 +1,6 @@
 <h1>COMICS</h1>
-<section>
-	<div ng-repeat='comic in comics' class="col-sm-6">			
-		<div class="panel panel-primary">
-            <div class="panel-heading">
-             <h3 class="panel-title">{{comic.title}}</h3>
-            </div>
-            <div class="panel-body">
-            	<div class="col-sm-6">
-            		 <img src="{{comic.thumbnail.path+'.'+comic.thumbnail.extension}}" width="150" alt="">            		
-            	</div>
-            	<div class="col-sm-6">             		
-            		{{comic.description}}
-                    <a href="#/comics/{{comic.id}}">details</a>	
-            	</div>             
-            </div>
-          </div>
-          
-	</div>
-</section>
+<div ng-repeat='comic in comics | thumbnailDefined:noThumbnailUrl | orderBy : "title"' class="pull-left">
+    <a href="#/comics/{{comic.id}}">
+        <img src="{{comic.thumbnail.path+'.'+comic.thumbnail.extension}}" width="350" height="530" alt="{{comic.title}}" title="{{comic.title}}">
+    </a>    
+</div>
